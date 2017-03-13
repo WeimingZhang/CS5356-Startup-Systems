@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "6"
+branches:
+  only:
+    # needs to be listed explicitly
+    - gh-pages
+    - /.*/
+sudo: false
+cache:
+  directories:
+    - node_modules
+# these should match the `scripts` section of the `package.json`
+script:
+  - npm run validate_html -s
+  - npm run lint_js -s
+  - npm run check_ajax -s

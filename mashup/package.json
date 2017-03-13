@@ -1,0 +1,35 @@
+{
+  "name": "mashup",
+  "description": "mashup project",
+  "scripts": {
+    "check_ajax": "node testAjax.js",
+    "lint_js": "jshint --extract=auto --extra-ext=.html .",
+    "test": "echo '---Validating HTML---' && npm run validate_html && echo '---Validating JavaScript---' && npm run lint_js && echo '---Checking for AJAX---' && npm run check_ajax",
+    "validate_html": "html-validator --file=index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/advanced-js/mashup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/advanced-js/mashup/issues"
+  },
+  "homepage": "https://github.com/advanced-js/mashup",
+  "devDependencies": {
+    "globby": "^6.0.0",
+    "html-validator-cli": "afeld/html-validator-cli#5c7f12080",
+    "jshint": "^2.9.3"
+  },
+  "jshintConfig": {
+    "browser": true,
+    "eqeqeq": true,
+    "esversion": 6,
+    "forin": true,
+    "freeze": true,
+    "latedef": true,
+    "maxdepth": 4,
+    "maxparams": 3,
+    "maxstatements": 10,
+    "newcap": true
+  }
+}

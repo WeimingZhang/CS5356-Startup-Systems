@@ -1,0 +1,1 @@
+web: gunicorn printTime:app --log-file -
